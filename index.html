@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Balance Sheet Calculator</title>
+            <link rel="stylesheet" href="CSS/styling_RLV.css">
+    </head>
+    <body>
+
+        <div id="header"><h1>Bear Debt Solutions - Balance Sheet Calculator</h1></div>
+
+            <div id="container">
+                    <div id="title1" class="titles">
+                        <h2><strong>Assets</strong></h2>
+                        
+                    </div>
+
+                    <div id="title2" class="titles">
+                        <h2><strong>Liabilities</strong></h2>
+                    </div>
+
+                    <div id="subtitles1" class="subtitles">
+                        <h5>Current Assets</h5>
+                        <div id="assets">
+                            <label for="cash">Cash:</label> <input type="number" id="cash"><br>
+                            <label for="inventory">Inventory:</label> <input type="number" id="inventory"><br>
+                            <label for="supplies">Supplies:</label> <input type="number" id="supplies"><br>
+                            <label for="tempin">Temporary Investments:</label> <input type="number" id="tempin"><br><br>
+                            <label for="TotalA" id="TotalA"><Strong>Total Current Assets:</Strong></label>
+                        </div>
+
+                        <button id="addCA" class="button" onclick="showText('assets'); hideButton('addCA');">Add current Assets</button><br>
+
+                        <h5>Investment Property & Equipment</h5>
+                        <div id="investpe">
+                            <label for="land">Land:</label> <input type="number" id="land"><br>
+                            <label for="building">Building and Improvements:</label> <input type="number" id="building"><br>
+                            <label for="equipment">Equipment:</label> <input type="number" id="equipment"><br>
+                            <label for="tempin1">Temporary Investments:</label> <input type="number" id="tempin1"><br><br>
+                            <label for="TotalIPE" id="TotalIPE"><Strong>Total Investment Property and Equipment:</Strong></label>
+                        </div>
+                            <button id="addIPE" class="button" onclick="showText('investpe'); hideButton('addIPE');">Add Investment Property & Equipment</button><br>
+
+                        <h5>Intangibles</h5>
+                            <div id="intangibles">
+                                <label for="trade">Trade Names:</label> <input type="number" id="trade"><br>
+                                <label for="goodwill">Goodwill:</label> <input type="number" id="goodwill"><br><br>
+                                <label for="TotalI" id="TotalI"><Strong>Total Intangibles:</Strong></label>
+                            </div>
+                            <button class="button" id="addintangibles" onclick="showText('intangibles'); hideButton('addintangibles');">Add Intangibles</button><br>
+
+                    </div>
+
+                    <div id="subtitles2" class ="subtitles">
+                        <h5>Current Liabilities</h5>
+                        <div id="currentL">
+                            <label for="accountsP">Accounts Payable:</label> <input type="number" id="accountsP"><br>
+                            <label for="notes">Notes Payable:</label> <input type="number" id="notes"><br>
+                            <label for="interestP">Interest Payable:</label> <input type="number" id="interestP"><br>
+                            <label for="wagesP">Wages Payable:</label> <input type="number" id="wagesP"><br>
+                            <label for="accruedE">Accrued Expenses:</label> <input type="number" id="accruedE"><br><br>
+                            <label for="TotalcL" id="TotalcL"><Strong>Total Current Liabilities:</Strong></label>
+                        </div>
+                            <button class="button" id="addcL" onclick="showText('currentL'); hideButton('addcL');">Add Current Liabilities</button><br>
+
+                        <h5>Long-Term Liabilities</h5>
+                        <div id="longtermL">
+                            <label for="notesP">Notes Payable:</label> <input type="number" id="notesP"><br>
+                            <label for="bondsP">Bonds Payable:</label> <input type="number" id="bondsP"><br><br>
+                            <label for="TotalTL" id="TotalTL"><Strong>Total Long-Term Liabilities:</Strong></label>
+                        </div>
+                            <button class="button" id="addlongtermL" onclick="showText('longtermL'); hideButton('addlongtermL');">Add Long-term Liabilities</button><br>
+
+                        <h3>Total Position</h3>
+                        <button class="button" id="calcP" onclick="calculateP()"><strong>Calculate Position</strong></button><br>
+
+                        <h4 id="Tassets">Total Assets:</h4> 
+                        <h4 id="totalL">Total Liabilities:</h4> 
+                        <h4 id="position">Position:</h4> 
+
+
+                    </div>
+            </div>
+
+
+        <div id="footer"><p>B.D. Solutions</p></div>
+
+
+        <script src="JS/properties_RLV"></script>
+    </body>
+</html>

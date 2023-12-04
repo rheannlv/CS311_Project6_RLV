@@ -1,0 +1,84 @@
+#header{
+    display: flex;
+    background-color: #6D0C26;
+    padding-left: 30px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#footer{
+    display: flex;
+    background-color: #6D0C26;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: smaller;
+}
+
+.titles{
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    background-color: 	#79C0D7;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#container{
+    display: grid;
+    background-color: #CBCECE;
+    border: 4px solid #92775B;
+    grid-template-columns:[col-start] 3fr [mid] 3fr [col-end];
+    grid-template-rows: [top-line] .5fr [top-mid] 1fr [mid] 3fr [bottom-mid] .5fr [bottom-end];
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#subtitles1{
+    padding-left: 15px;
+    grid-column-start: col-start;
+    grid-column-end: mid;
+    grid-row-start: top-mid;
+    grid-row-end: bottom-mid;
+}
+
+#subtitles2{
+    padding-left: 15px;
+    padding-right: 15px;
+    grid-column-start: mid;
+    grid-column-end: col-end;
+    grid-row-start: top-mid;
+    grid-row-end: bottom-mid;
+}
+
+#assets{
+    text-align: right;
+    display: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#investpe{
+    text-align: right;
+    display: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#intangibles{
+    text-align: right;
+    display: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#longtermL{
+    text-align: right;
+    display: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#currentL{
+    text-align: right;
+    display: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.button{
+    display: inline-block;
+    padding: 5px 5px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}

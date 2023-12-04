@@ -1,0 +1,64 @@
+
+function showText(id){
+    let show = document.getElementById(id);
+    show.style.display = 'block';
+}
+
+function hideButton(id){
+    let hide = document.getElementById(id);
+    hide.style.display = 'none';
+}
+
+function calculateP(){
+    //Current Assets value
+    let cash = document.getElementById('cash').value;
+    let inventory = document.getElementById('inventory').value;
+    let supplies = document.getElementById('supplies').value;
+    let tempin = document.getElementById('tempin').value;
+        let TAresult = (+cash + +inventory + +supplies + +tempin);
+            document.getElementById('TotalA').innerHTML = '<b>Total Current Assets: $</b>' + TAresult.toFixed(2);
+
+    //Investment Property & Equipment value
+    let land = document.getElementById('land').value;
+    let building = document.getElementById('building').value;
+    let equipment = document.getElementById('equipment').value;
+    let tempin1 = document.getElementById('tempin1').value;
+    let TotalIPE = (+land + +building + +equipment + +tempin1);
+            document.getElementById('TotalIPE').innerHTML = '<b>Total Investment Property and Equipment: $</b>' + TotalIPE.toFixed(2);
+
+
+    //Intangibles value
+    let trade = document.getElementById('trade').value;
+    let goodwill = document.getElementById('goodwill').value;
+        let TotalI = (+trade + +goodwill);
+            document.getElementById('TotalI').innerHTML = '<b>Total Intangibles: $</b>' + TotalI.toFixed(2);
+
+    //Current Liabilities value
+    let accountsP = document.getElementById('accountsP').value;
+    let notes = document.getElementById('notes').value;
+    let interestP = document.getElementById('interestP').value;
+    let wagesP = document.getElementById('wagesP').value;
+    let accruedE = document.getElementById('accruedE').value;
+        let TotalcL = (+accountsP + +notes + +interestP + +wagesP + +accruedE);
+            document.getElementById('TotalcL').innerHTML = '<b>Total Current : $</b>' + TotalcL.toFixed(2);
+
+    //Long-term liabilities value
+    let notesP = document.getElementById('notesP').value;
+    let bondsP = document.getElementById('bondsP').value;
+        let TotalTL = (+notesP + +bondsP);
+            document.getElementById('TotalTL').innerHTML = '<b>Total Long-term Liabilities: $</b>' + TotalTL.toFixed(2);
+
+
+    //Total assets
+    let Tassets = (+TAresult + +TotalIPE + +TotalI);
+        document.getElementById('Tassets').innerHTML = '<b>Total Assets: $</b>' + Tassets.toFixed(2);
+
+    //Total Liabilities
+    let totalL = (+TotalcL + +TotalTL);
+        document.getElementById('totalL').innerHTML = '<b>Total Liabilities: $</b>' + totalL.toFixed(2);
+
+    //Position
+    let position = (Tassets - totalL);
+        document.getElementById('position').innerHTML = '<b>Position: $</b>' + position.toFixed(2);
+
+}
